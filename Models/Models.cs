@@ -1,5 +1,7 @@
 namespace CoffeeShopMS.Models;
 
+
+//encapsulation is used, get;set has been given
 public class User
 {
     public int Id { get; set; }
