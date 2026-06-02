@@ -33,7 +33,7 @@ public partial class OrdersListForm : Form
                 sql += $" WHERE o.CustomerName LIKE '%{filter.Replace("'", "''")}%'";
 
             sql += " ORDER BY o.Id DESC";
-
+// Concepts of OOP used
             using var conn   = DatabaseHelper.GetConnection();
             using var cmd    = new SQLiteCommand(sql, conn);
             using var reader = cmd.ExecuteReader();
@@ -73,7 +73,7 @@ public partial class OrdersListForm : Form
         int orderId = Convert.ToInt32(cell);
 
         var details = new List<(int qty, string name, string up, string sub)>();
-
+//To handle the errors
         try
         {
             using var conn   = DatabaseHelper.GetConnection();
